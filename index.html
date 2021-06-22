@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <div class="col pl-0">
+    <div class="card h-100">
+      <div class="position-relative">
+        <img
+          src="./img/1517966385artwork.jpg"
+          class="card-img-top img-fluid rounded py-3 px-2"
+          alt="..."
+        />
+  
+        <div class="play"></div>
+      </div>
+  
+      <div class="card-body px-2 pt-0" id="song-here">
+        <h5 class="card-title mb-1 text-white">
+          Impaulsive with Logan pau
+        </h5>
+        <p class="card-text text-white-50">Logan Paul</p>
+      </div>
+    </div>
+  </div>
+  
+  
+
+
+
+
+
+
+  <script>
+    window.onload = async () => {
+
+
+  let eminem = await loadSongs('eminem')
+  let songsTitle = document.getElementById('song-here')
+  eminem.forEach(song => songsTitle.innerHTML = `<p>${song.title}<p>`)
+}
+
+  </script>
+</body>
+</html>
